@@ -1,0 +1,31 @@
+
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 0; 
+    border-bottom: 1px solid #e0e0e0;
+ }
+.logo h1 { 
+    font-family: 'Parisienne', 
+    cursive; font-size: 3rem;
+    margin: 0; 
+    font-weight: 400; 
+    }
+
+nav ul {
+    display: flex; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px; 
+    }
+
+nav a {
+     text-decoration: none;
+    color: #333; 
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+     text-transform: uppercase;
+      }

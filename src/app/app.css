@@ -1,0 +1,21 @@
+/* src/app/app.component.css */
+
+/* Le conteneur principal de l'application */
+.app-container {
+  display: flex;
+  flex-direction: column; /* Aligne les enfants (header, main-content, footer) verticalement */
+  min-height: 100vh; /* Prend au minimum 100% de la hauteur de la fenêtre */
+}
+
+/* La zone qui contient la barre latérale et le contenu principal */
+.main-content {
+  display: flex; /* Aligne aside et main côte à côte */
+  flex: 1; /* Fait en sorte que cette zone prenne toute la hauteur disponible */
+}
+
+/* La zone de contenu principal */
+main {
+  flex: 1; /* Prend toute la largeur restante à côté de la barre latérale */
+  padding: 2rem;
+  background-color: #ffffff;
+}
