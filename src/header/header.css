@@ -1,31 +1,217 @@
 
-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 20px 0; 
-    border-bottom: 1px solid #e0e0e0;
- }
-.logo h1 { 
-    font-family: 'Parisienne', 
-    cursive; font-size: 3rem;
-    margin: 0; 
-    font-weight: 400; 
-    }
+/* Tout en haut de votre fichier style.css */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400;700&family=Parisienne&display=swap');
+
+/* ======== Styles Généraux et Polices ======== */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Police par défaut pour le corps du texte */
+    color: #333;
+    background-color: #fff;
+}
+
+/* Conteneur principal pour centrer le contenu */
+header, .features {
+    max-width: 1200px;
+    margin: 0 auto; /* Centre les sections horizontalement */
+    padding: 20px;
+}
+
+
+/* ======== 1. Style de l'En-tête ======== */
+header {
+    display: flex;
+    flex-direction: column; /* Place le logo au-dessus de la navigation */
+    align-items: center; /* Centre les éléments */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+.logo h1 {
+    font-family: 'Parisienne', cursive; /* Police spéciale pour le titre */
+    font-size: 4rem; /* Grande taille de police */
+    margin: 20px 0;
+    font-weight: 400; /* La police est déjà grasse, pas besoin de plus */
+}
 
 nav ul {
-    display: flex; 
-    list-style-type: none;
-    margin: 0;
+    display: flex; /* Aligne les liens de navigation horizontalement */
+    list-style-type: none; /* Supprime les puces */
     padding: 0;
-    gap: 30px; 
-    }
+    gap: 35px; /* Espace entre chaque lien */
+}
 
 nav a {
-     text-decoration: none;
-    color: #333; 
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #333;
     font-weight: bold;
-    letter-spacing: 1px;
     font-size: 0.8rem;
-     text-transform: uppercase;
-      }
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* ======== 2. Style de la Section "Hero" ======== */
+.hero {
+    height: 60vh; /* Hauteur de 60% de la fenêtre */
+    /* background-image: url('images/logo css.png');         */
+    background-size: cover; /* L'image couvre toute la zone */
+    background-position: center; /* Centre l'image */
+
+    /* Centrer le contenu texte verticalement et horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.3); /* Léger fond sombre pour la lisibilité */
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.hero-content p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* ======== 3. Style des Fonctionnalités ======== */
+.features {
+    display: flex; /* Aligne les boîtes horizontalement */
+    justify-content: space-between; /* Espace équitable entre les boîtes */
+    gap: 30px; /* Espace fixe entre les boîtes */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.feature-box {
+    flex-basis: 30%; /* Chaque boîte prend environ 30% de la largeur */
+    border: 1px solid #ddd;
+    padding: 25px;
+    text-align: center;
+}
+
+.feature-box h3 {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.feature-box p {
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    color: #666;
+}
+
+/* ======== 4. Style de la Section Blog ======== */
+.blog-section {
+    padding: 50px 20px; /* Ajoute de l'espace au-dessus et en-dessous de la section */
+    background-color: #f9f9f9; /* Un fond très légèrement gris pour la distinguer */
+}
+
+.post-card {
+    max-width: 800px; /* Largeur maximale de la carte */
+    margin: 0 auto; /* Centre la carte horizontalement */
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Ombre légère pour un effet de profondeur */
+    text-align: center; /* Centre tout le texte à l'intérieur */
+    margin-bottom: 40px;
+}
+
+.post-card img {
+    width: 100%; /* L'image prend toute la largeur de la carte */
+    height: auto; /* La hauteur s'ajuste automatiquement */
+    display: block; /* Supprime un petit espace blanc sous l'image */
+}
+
+.post-content {
+    padding: 40px; /* Espace intérieur pour le contenu */
+}
+
+.post-content h2 {
+    font-family: 'Lora', serif; /* Police avec serifs pour le titre */
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Style pour la ligne "Posted on..." avec les traits sur les côtés */
+.post-meta {
+    display: flex; /* On utilise Flexbox pour aligner les traits et le texte */
+    align-items: center; /* Centre verticalement les éléments */
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* Création des traits avant et après le texte */
+.post-meta::before,
+.post-meta::after {
+    content: ''; /* Obligatoire pour les pseudo-éléments */
+    flex: 1; /* Fait en sorte que les traits remplissent l'espace disponible */
+    height: 1px;
+    background-color: #ddd;
+    margin: 0 20px; /* Espace entre le trait et le texte */
+}
+
+.post-content p {
+    line-height: 1.7;
+    color: #555;
+}
+
+.read-more-btn {
+    display: inline-block; /* Permet de définir padding et margin */
+    background-color: #222;
+    color: #fff;
+    padding: 12px 28px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Effet de transition au survol */
+}
+
+.read-more-btn:hover {
+    background-color: #555; /* Changement de couleur au survol */
+}
+
+/* ======== 5. Style de la Pagination ======== */
+.pagination {
+    display: flex; /* Aligne les boutons horizontalement */
+    justify-content: center; /* Centre les boutons */
+    gap: 10px; /* Espace entre les boutons */
+    padding: 20px 0; /* Espace au-dessus et en-dessous */
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #222; /* Bordure noire par défaut */
+    background-color: #222; /* Fond noir par défaut */
+    color: #fff; /* Texte blanc par défaut */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Effet de transition */
+}
+
+/* Style pour le bouton de la page active */
+.pagination a.active {
+    background-color: #fff; /* Fond blanc */
+    color: #222; /* Texte noir */
+}
+
+/* Style au survol de la souris pour les boutons non-actifs */
+.pagination a:not(.active):hover {
+    background-color: #555;
+    border-color: #555;
+}

@@ -1,7 +1,144 @@
+/* ======== 6. Style du Footer ======== */
+
 footer {
-  background-color: #34495e;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
+    background-color: #111; /* Fond noir/gris très foncé */
+    color: #a0a0a0; /* Texte gris clair */
+    padding: 60px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Espace entre les colonnes */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1; /* Chaque colonne prend une part égale de l'espace */
+}
+
+footer h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444; /* Ligne sous le titre */
+    display: inline-block; /* Fait en sorte que la bordure ne prenne pas toute la largeur */
+}
+
+footer p {
+    line-height: 1.7;
+}
+
+/* --- Styles spécifiques aux colonnes --- */
+
+/* Colonne 1: Icônes sociales */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* Dans un vrai projet, on utiliserait des icônes (ex: Font Awesome) */
+    /* Ici, nous simulons avec des couleurs */
+    transition: transform 0.3s ease;
+}
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+.social-twitter    { background-color: #1DA1F2; }
+.social-facebook   { background-color: #1877F2; }
+.social-youtube    { background-color: #FF0000; }
+.social-instagram  { background-color: #E4405F; }
+
+
+/* Colonne 2: Liste des articles récents */
+.recent-posts-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-posts-list li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.recent-posts-list li:last-child {
+    border-bottom: none; /* Pas de bordure pour le dernier élément */
+    margin-bottom: 0;
+}
+
+.recent-posts-list img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.post-info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.post-info a:hover {
+    text-decoration: underline;
+}
+.post-info span {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Colonne 3: Formulaire Newsletter */
+.newsletter-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.newsletter-form input {
+    flex-grow: 1; /* L'input prend tout l'espace disponible */
+    border: 1px solid #555;
+    background-color: #222;
+    color: #fff;
+    padding: 12px;
+}
+
+.newsletter-form button {
+    border: 1px solid #555;
+    border-left: none;
+    background-color: #111;
+    color: #fff;
+    padding: 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.newsletter-form button:hover {
+    background-color: #333;
+}
+
+
+/* --- Barre de copyright en bas --- */
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #444;
+    color: #888;
+    font-size: 0.8rem;
 }
